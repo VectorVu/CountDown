@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Counter</title>
+</head>
+<body>
+    <div class="input"> 
+        <input id ="timeInput" type="date" required>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div class="percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle id= "c1" cx="70" cy="70" r="70"></circle>
+                </svg>
+                <p id="day" ></p>
+            </div>
+            <div class="text">
+                <p>Days</p>
+                <p>Max: 365</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle id= "c2" cx="70" cy="70" r="70"></circle>
+                </svg>
+                <p id="hour" ></p>
+            </div>
+            <div class="text">
+                <p>Hours</p>
+                <p>Max: 24</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle id= "c3" cx="70" cy="70" r="70"></circle>
+                </svg>
+                <p id="minute" ></p>
+            </div>
+            <div class="text">
+                <p>Minutes</p>
+                <p>Max: 60</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle id= "c4" cx="70" cy="70" r="70"></circle>
+                </svg>
+                <p id="second" ></p>
+            </div>
+            <div class="text">
+                <p>Seconds</p>
+                <p>Max: 60</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./app.js"></script>
+</html>
