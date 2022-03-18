@@ -2,7 +2,7 @@
 let circle = document.getElementById("c1");
 let timeInput = document.getElementById("timeInput");
 const diameterOfCircle = circle.getAttribute("r") * 2 * Math.PI;
-let intervalFlag = [undefined];
+let intervalFlag = undefined;
 function clearTimer() {
     document.getElementById("day").innerHTML = 0;
     document.getElementById("hour").innerHTML = 0;
@@ -14,13 +14,13 @@ timeInput.addEventListener("input", (e)=>{
     e.preventDefault();
     let timecount = new Date(e.target.value).getTime() - 25200000;//-25200000 để đưa về đúng múi giờ GMT+07:00;
     if (timecount > 0) {
-        if(intervalFlag[0]){
-            clearInterval(intervalFlag[0]);
+        if(intervalFlag){
+            clearInterval(intervalFlag);
             console.log("clear");
-            intervalFlag[0] =  setInterval(renderTimer, 1000);
+            intervalFlag =  setInterval(renderTimer, 1000);
         }
         
-        else intervalFlag[0] =  setInterval(renderTimer, 1000);
+        else intervalFlag =  setInterval(renderTimer, 1000);
         function renderTimer(){
             let now = new Date().getTime();
                 let distance = timecount - now;
